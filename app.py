@@ -25,6 +25,10 @@ class Record(db.Model):
     reps = db.Column(db.Integer)
     datetime = db.Column(db.String(50))
 
+@app.route("/")
+def index():
+    return "✅ API is running! Use /records or /infer"
+
 # ✅ 推論 + 上傳影片 API
 @app.route("/infer", methods=["POST"])
 def infer_video():
