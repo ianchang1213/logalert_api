@@ -13,6 +13,9 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///records.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
+with app.app_context():  # ✅ 確保在 app context 中初始化資料表
+    db.create_all()
+        
 # ✅ 資料表定義
 class Record(db.Model):
     id = db.Column(db.Integer, primary_key=True)
