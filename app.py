@@ -12,9 +12,6 @@ CORS(app)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///records.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
-
-with app.app_context():  # ✅ 確保在 app context 中初始化資料表
-    db.create_all()
         
 # ✅ 資料表定義
 class Record(db.Model):
@@ -25,6 +22,9 @@ class Record(db.Model):
     reps = db.Column(db.Integer)
     datetime = db.Column(db.String(50))
 
+with app.app_context():  # ✅ 確保在 app context 中初始化資料表
+    db.create_all()
+    
 @app.route("/")
 def index():
     return "✅ API is running! Use /records or /infer"
