@@ -25,10 +25,6 @@ class Record(db.Model):
     reps = db.Column(db.Integer)
     datetime = db.Column(db.String(50))
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
-
 # ✅ 推論 + 上傳影片 API
 @app.route("/infer", methods=["POST"])
 def infer_video():
