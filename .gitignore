@@ -1,0 +1,24 @@
+# === Python build ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# === VSCode 設定（若有使用）===
+.vscode/
+
+# === SQLite 資料庫 ===
+*.db
+
+# === 測試影片、推論輸出檔案 ===
+*.mp4
+*.avi
+*.mov
+
+# === 使用者影片資料夾（不要上傳使用者上傳影片）===
+videos/input/
+videos/output/
+
+# === 快取或暫存 ===
+.DS_Store
+*.log
