@@ -1,0 +1,8 @@
+flask
+flask_sqlalchemy
+flask_cors
+gunicorn
+ultralytics
+opencv-python-headless
+numpy
+pyyaml

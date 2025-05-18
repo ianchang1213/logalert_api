@@ -1,0 +1,20 @@
+path: C:/Users/ianch/Desktop/yolov8/yolo_images/just_plate # dataset root dir
+train: train
+val: valid
+test: test
+
+nc: 11
+names:
+  [
+    "00_red",
+    "01_blue",
+    "02_yellow",
+    "03_green",
+    "04_white",
+    "05_smallred",
+    "06_smallblue",
+    "07_smallyellow",
+    "08_smallgreen",
+    "09_smallwhite",
+    "10_collar",
+  ]
